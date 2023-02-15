@@ -4,7 +4,7 @@ const FRAME_WIDTH = 500;
 const MARGINS = {left: 50, right: 50, top: 50, bottom: 50};
 
 // Let's make a vis with the following data 
-const data2 = [10000, 20000, 40000]; 
+const data2 = [55000, 48000, 27000, 66000, 90000]; 
 
 // We would need an extremely large screen to use data2 values
 // as our cx values. In order for our vis to work on (almost) 
