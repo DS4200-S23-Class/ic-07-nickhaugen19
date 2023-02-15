@@ -1,1 +1,13 @@
+body {
+    font-family: Arial; 
+}
+li {
+    font-size: 14px;
+}
 
+.bold {
+    font-weight: bold;
+}
+.centered {
+    text-align: center;
+}
