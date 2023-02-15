@@ -34,6 +34,6 @@ FRAME3.selectAll("points")
 FRAME3.append("g")
       .attr("transform", "translate(" + MARGINS.left + 
             "," + (VIS_HEIGHT + MARGINS.top) + ")") 
-      .call(d3.axisLeft(Y_SCALE).ticks(4))
+      .call(d3.axisBottom(Y_SCALE).ticks(4))
         .attr("font-size", '20px');
   
