@@ -3,17 +3,6 @@ const FRAME_HEIGHT = 200;
 const FRAME_WIDTH = 500; 
 const MARGINS = {left: 50, right: 50, top: 50, bottom: 50};
 
-const FRAME1 = //store svg element as a variable   
-d3.select("#vis1") //analogous to document.selectElementByXX()
-                    // the "#" indicates an id, similar to .css
-  .append("svg") //adds a child svg to selected element
-    .attr("height", FRAME_HEIGHT) //set attributes of the added 
-                        // element. Note how methods are strung 
-                        // together with the . notation, and how
-                        // indenting is used to to organize code  
-    .attr("width", FRAME_WIDTH)
-    .attr("class", "frame"); // Note how we still end with a ; 
-
 // Let's make a vis with the following data 
 const data2 = [10000, 20000, 40000]; 
 
@@ -27,7 +16,7 @@ const data2 = [10000, 20000, 40000];
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
 const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right; 
 
-const FRAME3 = d3.select("#vis3")
+const FRAME3 = d3.select("#vis1")
                   .append("svg")
                     .attr("height", FRAME_HEIGHT)
                     .attr("width", FRAME_WIDTH)
