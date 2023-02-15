@@ -1,12 +1,15 @@
 body {
-    font-family: Arial; 
-}
-li {
-    font-size: 14px;
+  font-family: Arial;
 }
 
-.bold {
-    font-weight: bold;
+.firstCircle {
+  fill: blueviolet;
+}
+
+.point {
+  fill: darkcyan;
+}
+
 }
 .centered {
     text-align: center;
