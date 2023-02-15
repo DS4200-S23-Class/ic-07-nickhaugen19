@@ -23,5 +23,7 @@ d3.csv("data/circles.csv").then((data) => {
       .attr("cy", (d) => {return d.y })
       .attr("r", 30)
       .attr("fill", (d) => {return d.color});
+  
+});
  
   
