@@ -13,20 +13,20 @@ const FRAME3 = d3.select("#vis1")
                     .attr("width", FRAME_WIDTH)
                     .attr("class", "frame"); 
 
-const MAX_X = d3.max(data2, (d) => { return d; }); 
-console.log("Max x: " +MAX_X);  
+const MAX_Y = d3.max(data2, (d) => { return d; }); 
+console.log("Max y: " +MAX_Y);  
 
-const X_SCALE = d3.scaleLinear() 
-                  .domain([0, (MAX_X + 10000)])
+const Y_SCALE = d3.scaleLinear() 
+                  .domain([0, (MAX_Y + 10000)])
                   .range([0, VIS_WIDTH]); 
 
-console.log("Input: 40000, X_SCALE output: " + X_SCALE(40000));
+console.log("Input: 40000, Y_SCALE output: " + Y_SCALE(40000));
 
 FRAME3.selectAll("points")  
     .data(data2)  
     .enter()       
     .append("circle")  
-      .attr("cx", (d) => { return (X_SCALE(d) + MARGINS.left); }) 
+      .attr("cx", (d) => { return (Y_SCALE(d) + MARGINS.left); }) 
       .attr("cy", MARGINS.top) 
       .attr("r", 20)
       .attr("class", "point"); 
@@ -34,6 +34,6 @@ FRAME3.selectAll("points")
 FRAME3.append("g")
       .attr("transform", "translate(" + MARGINS.left + 
             "," + (VIS_HEIGHT + MARGINS.top) + ")") 
-      .call(d3.axisLeft(X_SCALE).ticks(4))
+      .call(d3.axisLeft(Y_SCALE).ticks(4))
         .attr("font-size", '20px');
   
